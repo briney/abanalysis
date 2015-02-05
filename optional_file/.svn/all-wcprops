@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/toolkit/!svn/ver/346960/trunk/c++/src/app/blast/igblast_test/optional_file
+END
+human_gl.aux
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/toolkit/!svn/ver/346959/trunk/c++/src/app/blast/igblast_test/optional_file/human_gl.aux
+END
+human_gl.aux.testonly
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/toolkit/!svn/ver/346960/trunk/c++/src/app/blast/igblast_test/optional_file/human_gl.aux.testonly
+END
+mouse_gl.aux
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/toolkit/!svn/ver/346959/trunk/c++/src/app/blast/igblast_test/optional_file/mouse_gl.aux
+END
