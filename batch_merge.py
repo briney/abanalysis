@@ -20,10 +20,13 @@ import argparse
 
 import pandaseq
 
-parser = argparse.ArgumentParser("Parses the output of IgBLAST into something suitable for import into a MySQL database")
-parser.add_argument('-i', '--in', dest='input', required=True, help="The input directory, containing paired FASTQ files (uncompressed or gzip compressed). Required.")
-parser.add_argument('-o', '--out', dest='output', required=True, help="The output directory, will contain merged FASTA files. Required.")
-parser.add_argument('-n', '--nextseq', dest='nextseq', default=False, action='store_true', help="Use flag if run was performed on a NextSeq sequencer.")
+parser = argparse.ArgumentParser("Batch merging of paired-end reads with PANDAseq")
+parser.add_argument('-i', '--in', dest='input', required=True, 
+					help="The input directory, containing paired FASTQ files (uncompressed or gzip compressed). Required.")
+parser.add_argument('-o', '--out', dest='output', required=True, 
+					help="The output directory, will contain merged FASTA files. Required.")
+parser.add_argument('-n', '--nextseq', dest='nextseq', default=False, action='store_true', 
+					help="Use flag if run was performed on a NextSeq sequencer.")
 args = parser.parse_args()
 
 

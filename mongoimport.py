@@ -18,14 +18,24 @@ import argparse
 import subprocess
 
 parser = argparse.ArgumentParser("Performs the mongoimport operation on all files in the input directory.  Determines the appropriate collection using the filename.")
-parser.add_argument('-i', '--ip', dest='ip', default='localhost', help="The IP address of the MongoDB server. Defaults to 'localhost'.")
-parser.add_argument('-p', '--port', dest='port', default=27017, type=int, help="The port used to connect to the MongoDB server. Defaults to '27017'.")
-parser.add_argument('-f', '--in', dest='input_dir', required=True, help="A directory containing multiple JSON files for import to MongoDB.")
+parser.add_argument('-i', '--ip', dest='ip', default='localhost', 
+					help="The IP address of the MongoDB server. Defaults to 'localhost'.")
+parser.add_argument('-p', '--port', dest='port', default=27017, type=int, 
+					help="The port used to connect to the MongoDB server. Defaults to '27017'.")
+parser.add_argument('-f', '--in', dest='input_dir', required=True, 
+					help="A directory containing multiple JSON files for import to MongoDB. Required")
 parser.add_argument('-d', '--db', dest='db', required=True, help="The MongoDB database for import.")
-parser.add_argument('-l', '--log', dest='log', required=True, help="Log file for the mongoimport stdout.")
-parser.add_argument('-s', '--split', dest='split', default=1, type=int, help="Builds the collection name by truncating at the <split> occurance of the <delim> character.  Default is 1.")
-parser.add_argument('-e', '--delim', dest='delim', default='_', help="The character delimiter used to split the filename to get the collection name.  Default is '_'.")
-parser.add_argument('-x', '--split_only', dest='split_only', default=False, action='store_true', help="Instead of truncating the filename to get the collection name, takes only the split for the collection. Default is False.")
+parser.add_argument('-l', '--log', dest='log', required=True, 
+					help="Log file for the mongoimport stdout. Required")
+parser.add_argument('-s', '--split', dest='split', default=1, type=int, 
+					help="Builds the collection name by truncating at the <split> occurance of the <delim> character.  \
+					Default is 1.")
+parser.add_argument('-e', '--delim', dest='delim', default='_', 
+					help="The character delimiter used to split the filename to get the collection name.  \
+					Default is '_'.")
+parser.add_argument('-x', '--split_only', dest='split_only', default=False, action='store_true', 
+					help="Instead of truncating the filename to get the collection name, takes only the split for the collection. \
+					Default is False.")
 args = parser.parse_args()
 
 
