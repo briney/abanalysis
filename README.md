@@ -3,10 +3,10 @@
 
 ## usage
 
-To run AbAnalysis on a single FASTA or FASTQ file:
+To run AbAnalysis on a single FASTA or FASTQ file:  
 `python ab_analysis.py -i <input-file> -o <output-directory> -t <temp-directory>`
 
-To iteratively run AbAnalysis on all files in an input directory:
+To iteratively run AbAnalysis on all files in an input directory:  
 `python ab_analysis.py -i <input-directory> -o <output-directory> -t <temp-directory>`
 
 ## additional options  
